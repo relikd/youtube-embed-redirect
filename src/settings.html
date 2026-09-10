@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extension Settings: YouTube Embed Redirect</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body { font: 1em sans-serif; margin: 16px; min-width: 180px; }
+    div { margin-top: 16px; }
+    select, input { display: block; width: 100%; margin-top: 4px; padding: 4px 8px; }
+    #status { color: green; }
+  </style>
+  <script src="shared.js" defer></script>
+  <script src="settings.js" defer></script>
+</head>
+<body>
+  <div>
+    <label for="modeW">Redirect "/watch?v=" to:</label>
+    <select id="modeW">
+      <option value="off">Disabled</option>
+      <option value="yt-em">youtube.com/embed</option>
+      <option value="ytnc-em">youtube-nocookie.com/embed</option>
+      <option value="custom">Custom URL</option>
+    </select>
+  </div>
+
+  <div>
+    <label for="modeS">Redirect "/shorts/" to:</label>
+    <select id="modeS">
+      <option value="same">Same as above</option>
+      <option value="off">Disabled</option>
+      <option value="yt-em">youtube.com/embed</option>
+      <option value="ytnc-em">youtube-nocookie.com/embed</option>
+      <option value="yt-w">youtube.com/watch?v=</option>
+      <option value="custom">Custom URL</option>
+    </select>
+  </div>
+
+  <div class="no-pop">
+    <label for="customUrl">Custom URL:</label>
+    <input id="customUrl" type="text" placeholder="https://example.org#v={vid}&amp;start={t}&amp;playlist={list}">
+    <small>
+      <em>{vid}</em>: video id,
+      <em>{t}</em>: playback time (if any),
+      <em>{list}</em>: playlist id (if any)
+    </small>
+  </div>
+  
+  <div>
+    <a class="pop-only" id="openOptions" href="#">show options</a>
+    <p id="status" role="status"></p>
+  </div>
+</body>
+</html>
