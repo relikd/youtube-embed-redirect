@@ -7,6 +7,11 @@ YouTube Embed Redirect
 Redirects all YouTube URLs to their embed variant (automatically on visit, no need to click links).
 
 
+### Install
+
+Install from [Mozilla Addons](https://addons.mozilla.org/en-US/firefox/addon/youtube-embeded-redirect/) or download from [GitHub release](https://github.com/relikd/youtube-embed-redirect/releases/latest) (same xpi as the official website).
+
+
 ### Why?
 
 Mainly because the main YouTube site starts to get unusable.
